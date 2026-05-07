@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WIA 職場智能應用國際認證 — 給老師的邀請</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #080e12;
+    --surface: #0c1519;
+    --card: #101d22;
+    --accent: #34d399;
+    --accent2: #38bdf8;
+    --accent3: #fb923c;
+    --gold: #fbbf24;
+    --teal: #2dd4bf;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: rgba(52,211,153,0.15);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--bg);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #080e12 0%, #0a1a1f 40%, #071a12 100%);
+    padding: 56px 40px 48px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -60px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(52,211,153,0.11) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -60px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(56,189,248,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-deco {
+    position: absolute;
+    top: 32px; right: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+  .hero-deco span {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    border: 1px solid var(--accent);
+    padding: 3px 8px;
+    text-align: right;
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(52,211,153,0.08);
+    border: 1px solid rgba(52,211,153,0.3);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+  }
+  .badge-org {
+    background: rgba(56,189,248,0.08);
+    border-color: rgba(56,189,248,0.3);
+    color: #7dd3fc;
+  }
+  .badge-hot {
+    background: rgba(251,191,36,0.10);
+    border-color: rgba(251,191,36,0.3);
+    color: var(--gold);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #6ee7b7 55%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #38bdf8, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+  }
+
+  /* ── OFFICE SUITE BANNER ── */
+  .office-suite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  .office-item {
+    padding: 22px 16px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .office-item:last-child { border-right: none; }
+  .office-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .office-word::before  { background: #2b579a; }
+  .office-excel::before { background: #217346; }
+  .office-ppt::before   { background: #d24726; }
+
+  .office-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .office-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+  }
+  .office-sub {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-item {
+    padding: 20px 16px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 48px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  /* ── ADVANTAGE CARDS ── */
+  .adv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .adv-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .adv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--accent);
+  }
+  .adv-card:nth-child(2)::before { background: var(--accent2); }
+  .adv-card:nth-child(3)::before { background: var(--accent3); }
+
+  .adv-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .adv-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .adv-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── SKILL MATCH BANNER ── */
+  .skill-match {
+    background: linear-gradient(135deg, rgba(52,211,153,0.05), rgba(56,189,248,0.05));
+    border: 1px solid rgba(52,211,153,0.2);
+    padding: 24px 28px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .skill-match-icon { font-size: 36px; flex-shrink: 0; }
+  .skill-match-text h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6ee7b7;
+    margin-bottom: 6px;
+  }
+  .skill-match-text p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── SUBJECT CARDS ── */
+  .subject-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subject-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .subject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 12px;
+  }
+  .subject-code {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .code-word  { color: #60a5fa; }
+  .code-excel { color: var(--accent); }
+  .code-ppt   { color: #fb923c; }
+
+  .app-logo {
+    display: inline-block;
+    width: 36px; height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 14px;
+    flex-shrink: 0;
+  }
+
+  .subject-header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .subject-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.3;
+  }
+  .subject-name-en {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    margin-top: 3px;
+  }
+  .price-tag {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .price-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .price-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .level-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    margin-top: 4px;
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.3);
+    color: var(--accent);
+  }
+
+  .subject-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 14px 24px;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta-item { text-align: center; }
+  .meta-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+  }
+  .meta-key {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .subject-scope {
+    padding: 16px 24px;
+  }
+  .scope-title {
+    font-size: 10px;
+    font-family: 'Space Mono', monospace;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .scope-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .scope-list li {
+    font-size: 12px;
+    color: #6ee7b7;
+    background: rgba(52,211,153,0.06);
+    border: 1px solid rgba(52,211,153,0.15);
+    padding: 3px 10px;
+  }
+
+  /* ── TARGET AUDIENCE ── */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .audience-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .audience-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(52,211,153,0.25);
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .audience-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 5px;
+  }
+  .audience-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: rgba(251,191,36,0.05);
+    border: 1px solid rgba(251,191,36,0.2);
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .note-box p {
+    font-size: 13px;
+    color: #fcd34d;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .note-box p:last-child { margin-bottom: 0; }
+
+  /* ── ISSUER ── */
+  .issuer-box {
+    background: linear-gradient(135deg, var(--card) 0%, rgba(52,211,153,0.06) 100%);
+    border: 1px solid rgba(52,211,153,0.25);
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .issuer-icon-wrap {
+    width: 56px;
+    height: 56px;
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .issuer-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #6ee7b7;
+    margin-bottom: 6px;
+  }
+  .issuer-text p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── MATERIALS SECTION ── */
+  .materials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .material-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .material-card:hover {
+    border-color: rgba(52,211,153,0.4);
+    transform: translateY(-2px);
+  }
+  .material-card-top {
+    position: relative;
+    background: linear-gradient(135deg, #0a1f26, #0d2a1a);
+    padding: 16px 20px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .material-cover {
+    flex-shrink: 0;
+    width: 72px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    display: block;
+    border-radius: 2px;
+    background: #0a1a20;
+  }
+
+  .material-card-top-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .material-card-top::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .mat-word::before   { background: linear-gradient(90deg, #2b579a, #60a5fa); }
+  .mat-excel::before  { background: linear-gradient(90deg, #217346, #34d399); }
+  .mat-ppt::before    { background: linear-gradient(90deg, #d24726, #fb923c); }
+  .mat-master::before { background: linear-gradient(90deg, #7c3aed, #38bdf8); }
+
+  .material-level-tag {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .tag-specialist {
+    background: rgba(52,211,153,0.1);
+    border: 1px solid rgba(52,211,153,0.3);
+    color: var(--accent);
+  }
+  .tag-master {
+    background: rgba(139,92,246,0.1);
+    border: 1px solid rgba(139,92,246,0.3);
+    color: #a78bfa;
+  }
+
+  .material-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .material-code {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .material-card-body {
+    padding: 14px 20px 16px;
+  }
+  .material-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+  .material-features li {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .material-features li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 10px;
+  }
+  .material-mosme {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(52,211,153,0.05);
+    border: 1px solid rgba(52,211,153,0.12);
+    padding: 6px 10px;
+  }
+  .material-mosme span {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #6ee7b7;
+    letter-spacing: 0.5px;
+  }
+
+  .materials-note {
+    background: rgba(56,189,248,0.05);
+    border: 1px solid rgba(56,189,248,0.15);
+    padding: 16px 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .materials-note-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .materials-note p {
+    font-size: 12px;
+    color: #7dd3fc;
+    line-height: 1.7;
+  }
+  .materials-note a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 56px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, #050e0a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 300px;
+    background: radial-gradient(ellipse, rgba(52,211,153,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .cta-headline {
+    font-size: 32px;
+    font-weight: 900;
+    color: #f1f5f9;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .cta-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+  .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #03100a;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(52,211,153,0.35);
+  }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--surface);
+    padding: 32px 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .footer-contact {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 2;
+  }
+  .footer-contact a { color: var(--accent); text-decoration: none; }
+  .footer-copy {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 20px;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.2;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 40px 24px 36px; }
+    .hero-title { font-size: 34px; }
+    .section { padding: 36px 24px; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .office-suite { grid-template-columns: 1fr; }
+    .office-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .cta-section { padding: 40px 24px; }
+    .footer { padding: 28px 24px; }
+    .issuer-box { flex-direction: column; }
+    .subject-meta { grid-template-columns: repeat(2,1fr); }
+    .subject-header { flex-direction: column; align-items: flex-start; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .skill-match { flex-direction: column; }
+    .hero-deco { display: none; }
+    .materials-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-deco">
+      <span>Word</span>
+      <span>Excel</span>
+      <span>PowerPoint</span>
+    </div>
+    <div class="badge-row">
+      <span class="badge">國際認證</span>
+      <span class="badge badge-org">IPOE 艾葆科教基金會</span>
+      <span class="badge badge-hot">💼 職場必備技能</span>
+    </div>
+    <p class="hero-eyebrow">Workplace Intelligence Application Certification</p>
+    <h1 class="hero-title">WIA<br><em>職場智能應用</em><br>國際認證</h1>
+    <p class="hero-subtitle">
+      Documents(Microsoft® Word) · Spreadsheets(Microsoft® Excel®) · Presentations(Microsoft® PowerPoint®)<br>
+    </p>
+    <p class="hero-desc">
+      親愛的老師，AI 可以做簡報、寫文件、產生報表，<br>但企業需要的是
+      <strong style="color:#6ee7b7">能判斷、修正並優化這些內容的人。</strong><br>
+      WIA 國際認證以 Word、Excel、PowerPoint 為核心，透過實作驗證真實能力，<br>
+      培養學生從「使用工具」進階到「駕馭成果」，讓履歷不只好看，更有說服力。
+    </p>
+  </div>
+
+  <!-- OFFICE SUITE SHOWCASE -->
+  <div class="office-suite">
+    <div class="office-item office-word">
+      <span class="office-icon">📝</span>
+      <div class="office-name">WORD</div>
+      <div class="office-sub">文書處理 / Documents</div>
+    </div>
+    <div class="office-item office-excel">
+      <span class="office-icon">📊</span>
+      <div class="office-name">EXCEL</div>
+      <div class="office-sub">電子試算表 / Spreadsheets</div>
+    </div>
+    <div class="office-item office-ppt">
+      <span class="office-icon">🖥️</span>
+      <div class="office-name">POWERPOINT</div>
+      <div class="office-sub">商業簡報 / Presentations</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">認證科目</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">實作</span>
+      <span class="stat-label">考試題型</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">🇳🇱</span>
+      <span class="stat-label">荷蘭發證機構</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">PSC</span>
+      <span class="stat-label">線上認證系統</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ADVANTAGES -->
+  <div class="section">
+    <p class="section-tag">為何推薦 WIA</p>
+    <h2 class="section-title">不只會用，更要考出來、秀出來</h2>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <span class="adv-icon">⚡</span>
+        <div class="adv-title">實作考試，真正驗證能力</div>
+        <div class="adv-desc">非選擇題，全採實際操作題型，考生在電腦上完成任務，成績就是真實能力的最佳證明。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🎯</span>
+        <div class="adv-title">聚焦職場三大核心工具</div>
+        <div class="adv-desc">Word 文書、Excel 試算、PowerPoint 簡報——覆蓋九成以上職場每日使用場景，學以致用。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🌍</span>
+        <div class="adv-title">國際認可，履歷加分</div>
+        <div class="adv-desc">荷蘭 IPOE 艾葆科教基金會發證，PSC 線上可驗證。</div>
+      </div>
+    </div>
+
+    <div class="skill-match">
+      <div class="skill-match-icon">🏫</div>
+      <div class="skill-match-text">
+        <h4>最適合學校導入的理由</h4>
+        <p>課程對應計算機應用、商業文書、資訊應用等現有科目，老師不需額外備課；學生備考即是複習，一石二鳥。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJECTS -->
+  <div class="section">
+    <p class="section-tag">考試科目及費用</p>
+    <h2 class="section-title">3 大科目，辦公室技能全覆蓋</h2>
+    <div class="subject-stack">
+
+      <!-- WORD -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-header-left">
+            <div class="app-logo">📝</div>
+            <div>
+              <div class="subject-code code-word">WIA — Documents</div>
+              <div class="subject-name">文書處理</div>
+              <div class="subject-name-en">Documents · Using Microsoft® Word / Specialist</div>
+              <span class="level-badge">SPECIALIST</span>
+            </div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">3</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">實作題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>圖文編輯</li>
+            <li>表格設計</li>
+            <li>合併列印</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXCEL -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-header-left">
+            <div class="app-logo">📊</div>
+            <div>
+              <div class="subject-code code-excel">WIA — SPREADSHEETS</div>
+              <div class="subject-name">電子試算表</div>
+              <div class="subject-name-en">Spreadsheets · Using Microsoft® Excel® / Specialist</div>
+              <span class="level-badge">SPECIALIST</span>
+            </div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">3</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">實作題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>資料編修與格式設定</li>
+            <li>基本統計圖表設計</li>
+            <li>基本試算表函數應用</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- POWERPOINT -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-header-left">
+            <div class="app-logo">🖥️</div>
+            <div>
+              <div class="subject-code code-ppt">WIA — PRESENTATIONS</div>
+              <div class="subject-name">商業簡報</div>
+              <div class="subject-name-en">Presentations · Using Microsoft® PowerPoint® / Specialist</div>
+              <span class="level-badge">SPECIALIST</span>
+            </div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">3</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">實作題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>投影片編修與母片設計</li>
+            <li>多媒體簡報設計與應用</li>
+            <li>投影片放映與輸出</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="note-box">
+      <p>📋 <strong>題型說明：</strong>WIA 全採「實作題」，考生需在實際 Office 軟體環境中完成指定任務，不同於傳統選擇題，更能真實反映操作能力。</p>
+    </div>
+  </div>
+
+  <!-- TARGET AUDIENCE -->
+  <div class="section">
+    <p class="section-tag">適合對象</p>
+    <h2 class="section-title">哪些學生最適合考 WIA？</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-num">01</div>
+        <div>
+          <div class="audience-title">在學學生</div>
+          <div class="audience-desc">高中職、大專院校學生，希望在求職前取得具說服力的職場技能證明。</div>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">02</div>
+        <div>
+          <div class="audience-title">求職備戰族</div>
+          <div class="audience-desc">即將進入職場，想以國際認證強化履歷，在眾多應徵者中脫穎而出。</div>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">03</div>
+        <div>
+          <div class="audience-title">資訊應用課程學生</div>
+          <div class="audience-desc">配合商業文書、計算機應用等課程，讓上課所學直接轉換為國際認可憑證。</div>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">04</div>
+        <div>
+          <div class="audience-title">職場在職人員</div>
+          <div class="audience-desc">希望系統化補強辦公技能，並透過國際認證正式驗證自身專業能力。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ISSUER -->
+  <div class="section">
+    <p class="section-tag">發證單位</p>
+    <h2 class="section-title">讓努力不只被看見，更被世界認可</h2>
+    <div class="issuer-box">
+      <div class="issuer-icon-wrap">🇳🇱</div>
+      <div class="issuer-text">
+        <h4>Stichting IPOE Education Foundation（艾葆科教基金會）</h4>
+        <p>
+          總部設於荷蘭，致力推動全球資訊科技教育認證。WIA 職場智能應用國際認證透過 <strong style="color:#6ee7b7">PSC 專業技能認證系統</strong>進行考試與憑證管理，支援線上憑證驗證，確保證書真實性。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATERIALS -->
+  <div class="section">
+    <p class="section-tag">學習教材</p>
+    <h2 class="section-title">官方指定教材，備考事半功倍</h2>
+
+    <div class="materials-grid">
+
+      <!-- Word Specialist -->
+      <a href="https://tkdbook.jyic.net/FF361" class="material-card" target="_blank">
+        <div class="material-card-top mat-word">
+          <img class="material-cover" src="https://tkdbook.jyic.net/images/coverfb/ff361.webp" alt="FF361封面" loading="lazy">
+          <div class="material-card-top-info">
+            <span class="material-level-tag tag-specialist">Specialist</span>
+            <div class="material-title">Word 與 Copilot AI 應用實務含 WIA 國際認證</div>
+            <div class="material-code">FF361 · Documents</div>
+          </div>
+        </div>
+        <div class="material-card-body">
+          <ul class="material-features">
+            <li>文書處理 Specialist Level </li>
+            <li>圖解式解答＋影片教學雙重輔助</li>
+            
+          </ul>
+          <div class="material-mosme">
+            <span>🎁 附贈 MOSME Office 學習系統</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Excel Specialist -->
+      <a href="https://tkdbook.jyic.net/FF362" class="material-card" target="_blank">
+        <div class="material-card-top mat-excel">
+          <img class="material-cover" src="https://tkdbook.jyic.net/images/coverfb/ff362.webp" alt="FF362封面" loading="lazy">
+          <div class="material-card-top-info">
+            <span class="material-level-tag tag-specialist">Specialist</span>
+            <div class="material-title">Excel 與 Copilot AI 應用實務含 WIA 國際認證</div>
+            <div class="material-code">FF362 · Spreadsheets</div>
+          </div>
+        </div>
+        <div class="material-card-body">
+          <ul class="material-features">
+            <li>電子試算表 Specialist Level </li>
+            <li>圖解式解答＋影片教學雙重輔助</li>
+           
+          </ul>
+          <div class="material-mosme">
+            <span>🎁 附贈 MOSME Office 學習系統</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- PowerPoint Specialist -->
+      <a href="https://tkdbook.jyic.net/FF363" class="material-card" target="_blank">
+        <div class="material-card-top mat-ppt">
+          <img class="material-cover" src="https://tkdbook.jyic.net/images/coverfb/ff363.webp" alt="FF363封面" loading="lazy">
+          <div class="material-card-top-info">
+            <span class="material-level-tag tag-specialist">Specialist</span>
+            <div class="material-title">PowerPoint 與 Copilot AI 應用實務含 WIA 國際認證</div>
+            <div class="material-code">FF363 · Presentations</div>
+          </div>
+        </div>
+        <div class="material-card-body">
+          <ul class="material-features">
+            <li>商業簡報 Specialist Level </li>
+            <li>圖解式解答＋影片教學雙重輔助</li>
+            
+          </ul>
+          <div class="material-mosme">
+            <span>🎁 附贈 MOSME Office 學習系統</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Master Level (All-in-One) -->
+      <a href="https://tkdbook.jyic.net/FF360" class="material-card" target="_blank">
+        <div class="material-card-top mat-master">
+          <img class="material-cover" src="https://tkdbook.jyic.net/images/coverfb/ff360.jpg" alt="FF360封面" loading="lazy">
+          <div class="material-card-top-info">
+            <span class="material-level-tag tag-master">Master Level</span>
+            <div class="material-title">主題學 Office 與 Copilot AI 應用實務含 WIA 國際認證</div>
+            <div class="material-code">FF360 · Word + Excel + PowerPoint</div>
+          </div>
+        </div>
+        <div class="material-card-body">
+          <ul class="material-features">
+            <li>Word、Excel、PowerPoint 三科整合 Master Level </li>
+            <li>一本備齊全部考科</li>
+            <li>圖解式解答＋影片教學雙重輔助</li>
+          </ul>
+          <div class="material-mosme">
+            <span>🎁 附贈 MOSME Office 學習系統</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="materials-note">
+      <div class="materials-note-icon">💡</div>
+      <p>
+        所有官方教材均附贈 <strong style="color:#6ee7b7">MOSME Office 學習系統</strong>，包含範例檔、影音教學與線上評分功能。
+        更多學習資源請前往：<a href="https://www.mosme.net/mosme/book?order=6&c=139&t=139&sub=139_560&category=IPOE" target="_blank">mosme.net</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="cta-label">立即行動</p>
+    <h2 class="cta-headline">讓您的學生<br>帶著實力走進職場</h2>
+    <p class="cta-sub">
+      個人報名、班級團報或申請授權考試中心，<br>
+      歡迎洽詢，共同為學生創造競爭優勢。
+    </p>
+    <div class="btn-group">
+      <a href="https://reurl.cc/3M6QNX" class="btn-primary">個人認證考試</a>
+      <a href="https://jyic.net/jyic.servicegroup" class="btn-secondary">團體認證洽詢</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">艾葆國際認證中心</div>
+    <div class="footer-contact">
+      官方網站：<a href="https://ipoetech.jyic.net/WIA">ipoetech.jyic.net/WIA</a><br>
+      學習教材：<a href="https://www.mosme.net/">mosme.net</a>
+    </div>
+    <div class="footer-copy">© 2013 勁園科教集團 All Rights Reserved．本 EDM 資料來源：艾葆國際認證中心官方網站</div>
+  </div>
+
+</div>
+</body>
+</html>
