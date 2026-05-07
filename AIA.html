@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIA 人工智慧應用國際認證 — 給老師的邀請</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #080d18;
+    --surface: #0f1623;
+    --card: #131c2e;
+    --accent: #a78bfa;
+    --accent2: #f472b6;
+    --accent3: #34d399;
+    --gold: #fbbf24;
+    --blue: #60a5fa;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: rgba(167,139,250,0.15);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--bg);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #080d18 0%, #0f172a 40%, #1a0a2e 100%);
+    padding: 56px 40px 48px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -60px;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, rgba(167,139,250,0.13) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -60px;
+    width: 320px; height: 320px;
+    background: radial-gradient(circle, rgba(244,114,182,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(167,139,250,0.1);
+    border: 1px solid rgba(167,139,250,0.3);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+  }
+  .badge-org {
+    background: rgba(244,114,182,0.08);
+    border-color: rgba(244,114,182,0.3);
+    color: #f9a8d4;
+  }
+  .badge-hot {
+    background: rgba(251,191,36,0.1);
+    border-color: rgba(251,191,36,0.3);
+    color: var(--gold);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #c4b5fd 55%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #f472b6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-item {
+    padding: 20px 16px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 48px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  /* ── ADVANTAGE CARDS ── */
+  .adv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .adv-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .adv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--accent);
+  }
+  .adv-card:nth-child(2)::before { background: var(--accent2); }
+  .adv-card:nth-child(3)::before { background: var(--accent3); }
+
+  .adv-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .adv-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .adv-desc {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── SUBJECT CARDS ── */
+  .subject-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subject-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .subject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 12px;
+  }
+  .subject-code {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .code-aifa { color: #34d399; }
+  .code-aicc-s { color: var(--accent); }
+  .code-aicc-e { color: var(--gold); }
+  .code-aigc { color: #f472b6; }
+  .code-aipe { color: #fb923c; }
+  .code-aira { color: #60a5fa; }
+
+  .subject-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.3;
+  }
+  .subject-name-en {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    margin-top: 3px;
+  }
+  .price-tag {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .price-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .price-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .level-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    margin-top: 4px;
+  }
+  .lvl-s { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.3); color: var(--accent); }
+  .lvl-e { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: var(--gold); }
+
+  .subject-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 14px 24px;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta-item { text-align: center; }
+  .meta-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+  }
+  .meta-key {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .subject-scope {
+    padding: 16px 24px;
+  }
+  .scope-title {
+    font-size: 10px;
+    font-family: 'Space Mono', monospace;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .scope-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .scope-list li {
+    font-size: 12px;
+    color: #c4b5fd;
+    background: rgba(167,139,250,0.06);
+    border: 1px solid rgba(167,139,250,0.15);
+    padding: 3px 10px;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: rgba(251,191,36,0.05);
+    border: 1px solid rgba(251,191,36,0.2);
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .note-box p {
+    font-size: 13px;
+    color: #fcd34d;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .note-box p:last-child { margin-bottom: 0; }
+
+  /* ── ISSUER ── */
+  .issuer-box {
+    background: linear-gradient(135deg, var(--card) 0%, rgba(167,139,250,0.07) 100%);
+    border: 1px solid rgba(167,139,250,0.25);
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .issuer-icon-wrap {
+    width: 56px;
+    height: 56px;
+    background: rgba(167,139,250,0.12);
+    border: 1px solid rgba(167,139,250,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .issuer-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c4b5fd;
+    margin-bottom: 6px;
+  }
+  .issuer-text p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 56px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, #100a22 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 300px;
+    background: radial-gradient(ellipse, rgba(167,139,250,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .cta-headline {
+    font-size: 32px;
+    font-weight: 900;
+    color: #f1f5f9;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .cta-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+  .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #0a0818;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(167,139,250,0.35);
+  }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--surface);
+    padding: 32px 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .footer-contact {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 2;
+  }
+  .footer-contact a { color: var(--accent); text-decoration: none; }
+  .footer-copy {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 20px;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.25;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 40px 24px 36px; }
+    .hero-title { font-size: 34px; }
+    .section { padding: 36px 24px; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .cta-section { padding: 40px 24px; }
+    .footer { padding: 28px 24px; }
+    .issuer-box { flex-direction: column; }
+    .subject-meta { grid-template-columns: repeat(2,1fr); }
+    .subject-header { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge-row">
+      <span class="badge">國際認證</span>
+      <span class="badge badge-org">IPOE 艾葆科教基金會</span>
+      <span class="badge badge-hot">🔥 最熱門 AI 認證</span>
+    </div>
+    <p class="hero-eyebrow">Artificial Intelligence Application Certification</p>
+    <h1 class="hero-title">AIA<br><em>人工智慧應用</em><br>國際認證</h1>
+    <p class="hero-subtitle">
+      AIFA · AICC · AIGC · AIPE · AIRA<br>
+     
+    </p>
+    <p class="hero-desc">
+      親愛的老師，當 AI 正在改變各行各業，
+學生準備好了嗎？<br>
+      <strong style="color:#c4b5fd">不懂 AI 的學生，將面對一個陌生的職場。</strong><br>
+      AIA 國際認證涵蓋從基礎理論到提示工程、圖像辨識等實務應用，<br>
+      協助學生建立完整 AI 能力架構，在未來職場中具備真正的競爭力。
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">認證科目</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">6</span>
+      <span class="stat-label">考試項目</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">🇳🇱</span>
+      <span class="stat-label">荷蘭發證機構</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">PSC</span>
+      <span class="stat-label">線上認證系統</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ADVANTAGES -->
+  <div class="section">
+    <p class="section-tag">為何推薦 AIA</p>
+    <h2 class="section-title">用認證，讓學生的 AI 能力有方向、有定位</h2>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <span class="adv-icon">🤖</span>
+        <div class="adv-title">掌握 AI 核心技能</div>
+        <div class="adv-desc">涵蓋機器學習、深度學習、生成式 AI 到圖像辨識，建立完整 AI 知識體系。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🏭</span>
+        <div class="adv-title">促進職場應用能力</div>
+        <div class="adv-desc">聚焦智能製造、金融科技、醫療保健等真實場景，讓認證直接轉化為職場競爭力。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🚀</span>
+        <div class="adv-title">適應未來科技趨勢</div>
+        <div class="adv-desc">ChatGPT、提示工程、AIGC——認證內容緊跟產業最前線，確保知識不落伍。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJECTS -->
+  <div class="section">
+    <p class="section-tag">考試科目及費用</p>
+    <h2 class="section-title">5 大科目，全方位 AI 能力圖譜</h2>
+    <div class="subject-stack">
+
+      <!-- AIFA -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div>
+            <div class="subject-code code-aifa">▸ AIFA</div>
+            <div class="subject-name">人工智慧概論與應用</div>
+            <div class="subject-name-en">Artificial Intelligence Fundamentals and Applications</div>
+            <span class="level-badge lvl-s">SPECIALIST</span>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">50</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">40 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>人工智慧概論與發展</li>
+            <li>雲端運算與邊緣運算</li>
+            <li>人工智慧與物聯網</li>
+            <li>大數據</li>
+            <li>機器學習</li>
+            <li>深度學習</li>
+            <li>ChatGPT 與生成式 AI 應用</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AICC Specialist -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div>
+            <div class="subject-code code-aicc-s">▸ AICC</div>
+            <div class="subject-name">人工智慧綜合能力</div>
+            <div class="subject-name-en">Artificial Intelligence Comprehensive Capability</div>
+            <span class="level-badge lvl-s">SPECIALIST</span>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">50</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">40 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>AI基礎概念與發展</li>
+            <li>機器學習與深度學習</li>
+            <li>生成式AI</li>
+            <li>AI在教育領域的應用</li>
+            <li>AI在商業、行銷與金融</li>
+            <li>AI在醫療保健與生技</li>
+            <li>AI在製造業與工業4.0</li>
+            <li>AI在交通與城市管理</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AICC Expert -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div>
+            <div class="subject-code code-aicc-e">▸ AICC</div>
+            <div class="subject-name">人工智慧綜合能力</div>
+            <div class="subject-name-en">Artificial Intelligence Comprehensive Capability</div>
+            <span class="level-badge lvl-e">EXPERT</span>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$2,000</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">80</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇（涵蓋 Specialist 全部＋）</div>
+          <ul class="scope-list">
+            <li>機器學習生命週期與開發應用</li>
+            <li>大型語言模型與應用</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AIGC -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div>
+            <div class="subject-code code-aigc">▸ AIGC</div>
+            <div class="subject-name">人工智慧生成內容</div>
+            <div class="subject-name-en">Artificial Intelligence Generated Content</div>
+            <span class="level-badge lvl-s">SPECIALIST</span>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">50</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">40 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>AI基礎認知</li>
+            <li>圖文生成</li>
+            <li>影音生成</li>
+            <li>程序與數據分析</li>
+            <li>Gen AI 綜合應用</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AIPE -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div>
+            <div class="subject-code code-aipe">▸ AIPE</div>
+            <div class="subject-name">AI 提示工程師</div>
+            <div class="subject-name-en">AI Prompt Engineer </div>
+            <span class="level-badge lvl-e">EXPERT</span>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$2,000</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">80</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>AI提示工程師核心職能</li>
+            <li>AIGC基礎原理與發展</li>
+            <li>提示詞撰寫原則與技巧</li>
+            <li>提示工程優化與除錯</li>
+            <li>複雜任務提示詞設計策略</li>
+            <li>提示工程跨領域應用</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AIRA -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div>
+            <div class="subject-code code-aira">▸ AIRA</div>
+            <div class="subject-name">AI 圖像辨識應用</div>
+            <div class="subject-name-en">AI Image Recognition Application</div>
+            <span class="level-badge lvl-s">SPECIALIST</span>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">50</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">40 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>智慧發展的歷史</li>
+            <li>AI演算法的演進</li>
+            <li>訓練AI的資料庫與硬體</li>
+            <li>人工智慧神經網路模型</li>
+            <li>記憶學習與聊天機器人</li>
+            <li>機器學習</li>
+            <li>圖像應用與雲端軟體</li>
+            <li>人工智慧的管理與應用</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    
+    
+  </div>
+
+  <!-- ISSUER -->
+  <div class="section">
+    <p class="section-tag">發證單位</p>
+    <h2 class="section-title">讓努力不只被看見，更被世界認可</h2>
+    <div class="issuer-box">
+      <div class="issuer-icon-wrap">🇳🇱</div>
+      <div class="issuer-text">
+        <h4>Stichting IPOE Education Foundation（艾葆科教基金會）</h4>
+        <p>
+          總部設於荷蘭，致力推動全球資訊科技教育認證。AIA 人工智慧應用國際認證透過 <strong style="color:#c4b5fd">PSC 專業技能認證系統</strong>進行考試與憑證管理，支援線上憑證驗證，確保證書真實性。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="cta-label">立即行動</p>
+    <h2 class="cta-headline">讓您的學生<br>在 AI 時代搶先一步</h2>
+    <p class="cta-sub">
+      個人報名、班級團報或申請授權考試中心，<br>
+      歡迎洽詢。
+    </p>
+    <div class="btn-group">
+      <a href="https://reurl.cc/oYV3gv" class="btn-primary">個人認證考試</a>
+      <a href="https://jyic.net/jyic.servicegroup" class="btn-secondary">團體認證報名</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">艾葆國際認證中心</div>
+    <div class="footer-contact">
+      官方網站：<a href="https://ipoetech.jyic.net/AIA">ipoetech.jyic.net/AIA</a><br>
+      學習教材：<a href="https://www.mosme.net/mosme/book?s=AIA">mosme.net</a>
+    </div>
+    <div class="footer-copy">© 2013 勁園科教集團 All Rights Reserved．本 EDM 資料來源：艾葆國際認證中心官方網站</div>
+  </div>
+
+</div>
+</body>
+</html>
