@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEC 軟體工程師國際認證 — 給老師的邀請</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --card: #161e30;
+    --accent: #00d4ff;
+    --accent2: #7c3aed;
+    --accent3: #10b981;
+    --gold: #f59e0b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: rgba(0,212,255,0.15);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--bg);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #0a0e1a 0%, #0f172a 40%, #1e1040 100%);
+    padding: 56px 40px 48px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -80px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(0,212,255,0.1);
+    border: 1px solid rgba(0,212,255,0.3);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+  }
+  .badge-org {
+    background: rgba(124,58,237,0.1);
+    border-color: rgba(124,58,237,0.3);
+    color: #a78bfa;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #94d4ff 60%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #00d4ff, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-item {
+    padding: 24px 20px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 48px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  /* ── ADVANTAGE CARDS ── */
+  .adv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .adv-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .adv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--accent);
+  }
+  .adv-card:nth-child(2)::before { background: var(--accent2); }
+  .adv-card:nth-child(3)::before { background: var(--accent3); }
+  .adv-card:nth-child(4)::before { background: var(--gold); }
+
+  .adv-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .adv-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .adv-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── SUBJECT CARDS ── */
+  .subject-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subject-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .subject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .subject-header-left {}
+  .subject-level {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .level-f { color: var(--accent3); }
+  .level-s { color: var(--accent); }
+  .level-e { color: var(--gold); }
+
+  .subject-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+  .subject-name-en {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    margin-top: 2px;
+  }
+  .price-tag {
+    text-align: right;
+  }
+  .price-label {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .price-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .price-unit {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .subject-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 16px 24px;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta-item { text-align: center; }
+  .meta-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    display: block;
+  }
+  .meta-key {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .subject-scope {
+    padding: 16px 24px;
+  }
+  .scope-title {
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .scope-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .scope-list li {
+    font-size: 12px;
+    color: #94d4ff;
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.15);
+    padding: 4px 10px;
+  }
+
+  /* ── EXAM STRUCTURE ── */
+  .exam-info {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+  }
+  .exam-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .exam-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .exam-points li {
+    font-size: 13px;
+    color: var(--muted);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .exam-points li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 12px;
+    top: 1px;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: rgba(245,158,11,0.05);
+    border: 1px solid rgba(245,158,11,0.2);
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .note-box p {
+    font-size: 13px;
+    color: #fcd34d;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  .note-box p:last-child { margin-bottom: 0; }
+
+  /* ── ISSUER ── */
+  .issuer-box {
+    background: linear-gradient(135deg, var(--card) 0%, rgba(124,58,237,0.08) 100%);
+    border: 1px solid rgba(124,58,237,0.25);
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .issuer-icon-wrap {
+    width: 56px;
+    height: 56px;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .issuer-text h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c4b5fd;
+    margin-bottom: 6px;
+  }
+  .issuer-text p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 56px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, #0d1b35 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 300px;
+    background: radial-gradient(ellipse, rgba(0,212,255,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .cta-headline {
+    font-size: 32px;
+    font-weight: 900;
+    color: #f1f5f9;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+  .cta-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+  .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #0a0e1a;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,212,255,0.3);
+  }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--surface);
+    padding: 32px 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .footer-contact {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 2;
+  }
+  .footer-contact a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .footer-copy {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 20px;
+  }
+
+  /* divider line */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 0;
+    opacity: 0.3;
+  }
+
+  @media (max-width: 560px) {
+    .hero { padding: 40px 24px 36px; }
+    .hero-title { font-size: 34px; }
+    .section { padding: 36px 24px; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: 1fr; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .cta-section { padding: 40px 24px; }
+    .footer { padding: 28px 24px; }
+    .issuer-box { flex-direction: column; }
+    .subject-meta { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge-row">
+      <span class="badge">國際認證</span>
+      <span class="badge badge-org">IPOE 艾葆科教基金會</span>
+    </div>
+    <p class="hero-eyebrow">Software Engineer Certification</p>
+    <h1 class="hero-title">SEC<br><em>軟體工程師</em><br>國際認證</h1>
+    <p class="hero-subtitle">Python Programming · Fundamentals · Specialist · Expert</p>
+    <p class="hero-desc">
+      親愛的老師，當 AI 能寫程式，真正的差距在於——誰能看懂、修正並駕馭它。<br>
+      SEC 國際認證以 Python 為核心，培養學生從基礎語法到應用實作的完整能力，<br>
+      讓學生在 AI 時代中，不只是使用者，<strong style="color:#00d4ff">而是具備實力的創造者</strong>。
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">認證等級</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">🇳🇱</span>
+      <span class="stat-label">荷蘭發證機構</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">PSC</span>
+      <span class="stat-label">專業技能認證系統</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ADVANTAGES -->
+  <div class="section">
+    <p class="section-tag">為何推薦 SEC</p>
+    <h2 class="section-title">讓學生擁有真正被看見的實力</h2>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <span class="adv-icon">🧠</span>
+        <div class="adv-title">建構紮實程式邏輯</div>
+        <div class="adv-desc">涵蓋變數、資料型別、決策判斷與迴圈控制，培養嚴謹的運算思維與執行流程。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">📦</span>
+        <div class="adv-title">精通高效資料結構</div>
+        <div class="adv-desc">深入串列、元組、集合與字典，結合格式化技巧，靈活管理複雜數據。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">⚙️</span>
+        <div class="adv-title">模組化開發實戰力</div>
+        <div class="adv-desc">自訂函數、日期時間、File I/O 實務訓練，解決真實問題並適應未來自動化需求。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🌐</span>
+        <div class="adv-title">國際認可 提升競爭力</div>
+        <div class="adv-desc">由荷蘭 IPOE 艾葆科教基金會發證，強化學生進入職場的競爭優勢。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBJECTS -->
+  <div class="section">
+    <p class="section-tag">考試科目及費用</p>
+    <h2 class="section-title">三大等級，循序漸進</h2>
+    <div class="subject-stack">
+
+      <!-- Fundamentals -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-header-left">
+            <div class="subject-level level-f">▸ LEVEL 1 — FUNDAMENTALS</div>
+            <div class="subject-name">Python 程式設計 基礎級</div>
+            <div class="subject-name-en">Python Programming / Fundamentals</div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item">
+            <span class="meta-val">20</span>
+            <span class="meta-key">題數</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-val">50 min</span>
+            <span class="meta-key">考試時間</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-val">1000</span>
+            <span class="meta-key">及格標準（分）</span>
+          </div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>基本概念與語法</li>
+            <li>變數與賦值</li>
+            <li>資料輸入與顯示</li>
+            <li>數值型別與轉換</li>
+            <li>字串型別與函數</li>
+            <li>布林型別與運算</li>
+            <li>進階運算子優先順序</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Specialist -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-header-left">
+            <div class="subject-level level-s">▸ LEVEL 2 — SPECIALIST</div>
+            <div class="subject-name">Python 程式設計 專業級</div>
+            <div class="subject-name-en">Python Programming / Specialist</div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item">
+            <span class="meta-val">40</span>
+            <span class="meta-key">題數</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-val">100 min</span>
+            <span class="meta-key">考試時間</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-val">1000</span>
+            <span class="meta-key">及格標準（分）</span>
+          </div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇（涵蓋基礎級全部＋）</div>
+          <ul class="scope-list">
+            <li>if / if-else / if-elif</li>
+            <li>for 迴圈</li>
+            <li>while 迴圈</li>
+            <li>數值格式化</li>
+            <li>字串格式化</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Expert -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-header-left">
+            <div class="subject-level level-e">▸ LEVEL 3 — EXPERT</div>
+            <div class="subject-name">Python 程式設計 專家級</div>
+            <div class="subject-name-en">Python Programming / Expert</div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$2,000</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item">
+            <span class="meta-val">40</span>
+            <span class="meta-key">題數</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-val">100 min</span>
+            <span class="meta-key">考試時間</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-val">1000</span>
+            <span class="meta-key">及格標準（分）</span>
+          </div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇（進階應用）</div>
+          <ul class="scope-list">
+            <li>巢狀決策</li>
+            <li>巢狀 for / while 迴圈</li>
+            <li>串列 Lists</li>
+            <li>元組 Tuples</li>
+            <li>集合 Sets</li>
+            <li>字典 Dictionary</li>
+            <li>日期與時間</li>
+            <li>自訂函數</li>
+            <li>檔案輸入與輸出</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Exam structure note -->
+    <div style="margin-top:24px;">
+      <div class="exam-info">
+        <h4>📋 考試制度說明</h4>
+        <ul class="exam-points">
+          <li>三個等級：Fundamentals（5 Rank）、Specialist（10 Rank）、Expert（10 Rank）。</li>
+          <li>Specialist 的 Rank 1–5 即涵蓋 Fundamentals 全部內容。</li>
+          <li>需通過當前 Rank 方可進入下一 Rank，循序漸進不跳關。</li>
+          <li>單次考試未通過全部 Rank，下次從未通過的 Rank 繼續，並重新計算作答時間。</li>
+          <li>題型全為<strong style="color:#00d4ff">實作題</strong>，真正考驗程式能力。</li>
+        </ul>
+      </div>
+      
+     </div>
+  </div>
+
+  <!-- ISSUER -->
+  <div class="section">
+    <p class="section-tag">發證單位</p>
+    <h2 class="section-title">讓努力不只被看見，更被世界認可</h2>
+    <div class="issuer-box">
+      <div class="issuer-icon-wrap">🇳🇱</div>
+      <div class="issuer-text">
+        <h4>Stichting IPOE Education Foundation（艾葆科教基金會）</h4>
+        <p>
+          總部設於荷蘭，致力推動全球資訊科技教育認證。SEC 軟體工程師國際認證透過 <strong style="color:#c4b5fd">PSC 專業技能認證系統</strong>進行考試與憑證管理，支援線上憑證驗證，確保證書真實性。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="cta-label">立即行動</p>
+    <h2 class="cta-headline">讓您的學生<br>成為下一位軟體工程師</h2>
+    <p class="cta-sub">
+      個人報名、班級團報或申請授權考試中心，<br>
+      歡迎洽詢。
+    </p>
+    <div class="btn-group">
+      <a href="https://reurl.cc/DxylYd" class="btn-primary">個人認證考試</a>
+      <a href="https://jyic.net/jyic.servicegroup" class="btn-secondary">團體認證報名</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">艾葆國際認證中心</div>
+    <div class="footer-contact">
+      官方網站：<a href="https://ipoetech.jyic.net/SEC">ipoetech.jyic.net/SEC</a><br>
+      學習教材：<a href="https://www.mosme.net/">mosme.net</a>
+    </div>
+    <div class="footer-copy">© 2013 勁園科教集團 All Rights Reserved．本 EDM 資料來源：艾葆國際認證中心官方網站</div>
+  </div>
+
+</div>
+</body>
+</html>
