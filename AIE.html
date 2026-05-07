@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIE 人工智慧專業能力國際認證 — 給老師的邀請</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #060910;
+    --surface: #0a0f1a;
+    --card:    #0d1424;
+    --deep:    #07111f;
+    --accent:  #38bdf8;   /* electric blue — 比 AIA 紫更冷冽、工程感 */
+    --accent2: #818cf8;   /* indigo */
+    --accent3: #f472b6;   /* pink highlight */
+    --neon:    #00e5ff;   /* neon cyan spark */
+    --gold:    #fbbf24;
+    --warn:    #fb923c;
+    --text:    #e2e8f0;
+    --muted:   #64748b;
+    --muted2:  #94a3b8;
+    --border:  rgba(56,189,248,0.14);
+    --border2: rgba(56,189,248,0.08);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .email-wrapper { max-width: 680px; margin: 0 auto; background: var(--bg); }
+
+  /* ─────────────────────────────────────────
+     HERO
+  ───────────────────────────────────────── */
+  .hero {
+    position: relative;
+    background: linear-gradient(140deg, #060910 0%, #091220 45%, #060c1c 100%);
+    padding: 60px 40px 52px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+  /* circuit-board glow orbs */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -80px;
+    width: 480px; height: 480px;
+    background: radial-gradient(circle, rgba(56,189,248,0.10) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -80px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(129,140,248,0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* animated scanline accent */
+  .hero-scan {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--neon) 50%, transparent 100%);
+    opacity: 0.6;
+  }
+
+  /* floating tech tags */
+  .tech-float {
+    position: absolute;
+    top: 40px; right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  .tech-float span {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 8px;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  .badge-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 28px; flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(56,189,248,0.08);
+    border: 1px solid rgba(56,189,248,0.30);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; letter-spacing: 2px;
+    padding: 4px 12px; text-transform: uppercase;
+  }
+  .badge-expert {
+    background: rgba(251,146,60,0.10);
+    border-color: rgba(251,146,60,0.35);
+    color: var(--warn);
+  }
+  .badge-org {
+    background: rgba(129,140,248,0.08);
+    border-color: rgba(129,140,248,0.30);
+    color: #a5b4fc;
+  }
+  .badge-new {
+    background: rgba(0,229,255,0.08);
+    border-color: rgba(0,229,255,0.30);
+    color: var(--neon);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px; color: var(--accent);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .hero-title {
+    font-size: 52px; font-weight: 900;
+    line-height: 1.05; margin-bottom: 10px;
+    background: linear-gradient(130deg, #ffffff 0%, #93c5fd 45%, #38bdf8 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(130deg, #818cf8, #38bdf8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px; color: var(--muted2);
+    letter-spacing: 2px; line-height: 2;
+    margin-bottom: 30px;
+  }
+
+  .hero-desc {
+    font-size: 15px; color: #cbd5e1;
+    line-height: 1.85; position: relative; z-index: 1;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+  }
+
+  /* ─────────────────────────────────────────
+     LEVEL LADDER
+  ───────────────────────────────────────── */
+  .level-ladder {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px;
+  }
+  .ladder-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; color: var(--accent);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .ladder-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+  }
+  .ladder-step {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    text-align: center;
+    position: relative;
+  }
+  .ladder-step.active {
+    border-color: var(--accent);
+    background: rgba(56,189,248,0.06);
+  }
+  .ladder-step.active::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--accent);
+  }
+  .ladder-arrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px; color: var(--border);
+    text-align: center; padding: 0 4px;
+  }
+  .step-code {
+    font-family: 'Space Mono', monospace;
+    font-size: 15px; font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .step-name { font-size: 15px; color: var(--muted2); }
+  .step-level {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px; letter-spacing: 1px;
+    padding: 2px 6px; margin-top: 5px;
+    display: inline-block;
+  }
+  .lvl-s { background: rgba(56,189,248,0.10); border: 1px solid rgba(56,189,248,0.25); color: var(--accent); }
+  .lvl-e { background: rgba(251,146,60,0.10); border: 1px solid rgba(251,146,60,0.25); color: var(--warn); }
+
+  /* ─────────────────────────────────────────
+     STATS BAR
+  ───────────────────────────────────────── */
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-item {
+    padding: 20px 16px; text-align: center;
+    border-right: 1px solid var(--border);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 22px; font-weight: 700;
+    color: var(--accent); display: block;
+    line-height: 1; margin-bottom: 6px;
+  }
+  .stat-label { font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.18;
+  }
+
+  /* ─────────────────────────────────────────
+     SECTIONS
+  ───────────────────────────────────────── */
+  .section { padding: 48px 40px; border-bottom: 1px solid var(--border); }
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; color: var(--accent);
+    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 26px; font-weight: 700;
+    color: #f1f5f9; margin-bottom: 24px; line-height: 1.3;
+  }
+
+  /* ─────────────────────────────────────────
+     ADVANTAGE CARDS
+  ───────────────────────────────────────── */
+  .adv-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .adv-card {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 24px 20px; position: relative; overflow: hidden;
+  }
+  .adv-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100%; height: 3px; background: var(--accent);
+  }
+  .adv-card:nth-child(2)::before { background: var(--accent2); }
+  .adv-card:nth-child(3)::before { background: var(--accent3); }
+  .adv-icon { font-size: 28px; margin-bottom: 12px; display: block; }
+  .adv-title { font-size: 14px; font-weight: 700; color: #f1f5f9; margin-bottom: 8px; line-height: 1.4; }
+  .adv-desc { font-size: 12px; color: var(--muted2); line-height: 1.7; }
+
+  /* ─────────────────────────────────────────
+     TECH CHAIN (全技術鏈展示)
+  ───────────────────────────────────────── */
+  .tech-chain {
+    margin-top: 28px;
+    background: var(--deep);
+    border: 1px solid var(--border);
+    padding: 24px 28px;
+  }
+  .chain-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; color: var(--accent);
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .chain-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+  }
+  .chain-item {
+    background: rgba(56,189,248,0.05);
+    border: 1px solid rgba(56,189,248,0.12);
+    padding: 10px 12px; text-align: center;
+  }
+  .chain-icon { font-size: 20px; margin-bottom: 4px; display: block; }
+  .chain-name { font-size: 11px; color: #7dd3fc; line-height: 1.4; }
+
+  /* ─────────────────────────────────────────
+     SUBJECT CARDS
+  ───────────────────────────────────────── */
+  .subject-stack { display: flex; flex-direction: column; gap: 24px; }
+
+  .subject-card {
+    background: var(--card); border: 1px solid var(--border); overflow: hidden;
+  }
+  .subject-card.expert-card { border-color: rgba(251,146,60,0.25); }
+  .subject-card.expert-card .subject-header { border-bottom-color: rgba(251,146,60,0.15); }
+
+  .subject-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 26px; border-bottom: 1px solid var(--border); gap: 12px;
+  }
+
+  .subject-badge-wrap { display: flex; align-items: center; gap: 16px; }
+
+  .cert-icon-box {
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; flex-shrink: 0;
+    background: rgba(56,189,248,0.06);
+    border: 1px solid rgba(56,189,248,0.18);
+  }
+  .cert-icon-box.expert { background: rgba(251,146,60,0.06); border-color: rgba(251,146,60,0.20); }
+
+  .subject-code {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 5px;
+  }
+  .code-aiap { color: var(--accent); }
+  .code-bdae { color: var(--warn); }
+  .code-mlae { color: #c084fc; }
+
+  .subject-name { font-size: 12px; font-weight: 600; color: #f1f5f9; line-height: 1.3; }
+  .subject-name-en { font-size: 11px; color: var(--muted); font-family: 'Space Mono', monospace; margin-top: 3px; }
+
+  .price-tag { text-align: right; flex-shrink: 0; }
+  .price-label { font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+  .price-val {
+    font-family: 'Space Mono', monospace; font-size: 20px; font-weight: 700;
+    color: var(--gold); white-space: nowrap;
+  }
+  .level-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace; font-size: 9px;
+    letter-spacing: 1px; padding: 2px 8px; margin-top: 5px;
+  }
+
+  .subject-meta {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    padding: 14px 26px; gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta-item { text-align: center; }
+  .meta-val {
+    font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700;
+    color: var(--text); display: block;
+  }
+  .meta-key { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+  .subject-scope { padding: 18px 26px; }
+  .scope-title {
+    font-size: 10px; font-family: 'Space Mono', monospace;
+    color: var(--muted); letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .scope-list {
+    list-style: none; display: flex; flex-wrap: wrap; gap: 7px;
+  }
+  .scope-list li {
+    font-size: 12px; color: #7dd3fc;
+    background: rgba(56,189,248,0.05);
+    border: 1px solid rgba(56,189,248,0.14);
+    padding: 3px 10px;
+  }
+  .scope-list.expert li {
+    color: #fdba74;
+    background: rgba(251,146,60,0.05);
+    border-color: rgba(251,146,60,0.14);
+  }
+  .scope-list.mlae li {
+    color: #d8b4fe;
+    background: rgba(192,132,252,0.05);
+    border-color: rgba(192,132,252,0.14);
+  }
+
+  /* expert badge variant */
+  .expert-card .subject-code { color: var(--warn); }
+  .expert-card .cert-icon-box { background: rgba(251,146,60,0.06); border-color: rgba(251,146,60,0.18); }
+
+  /* ─────────────────────────────────────────
+     MATERIALS
+  ───────────────────────────────────────── */
+  .materials-section { padding: 48px 40px; border-bottom: 1px solid var(--border); }
+  .mat-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 4px; }
+
+  .mat-card {
+    background: var(--card); border: 1px solid var(--border);
+    display: flex; align-items: flex-start; gap: 0;
+    overflow: hidden; transition: border-color 0.2s;
+  }
+  .mat-card:hover { border-color: rgba(56,189,248,0.35); }
+
+  .mat-spine {
+    width: 6px; flex-shrink: 0; align-self: stretch;
+  }
+  .mat-spine-s  { background: linear-gradient(180deg, var(--accent), #0ea5e9); }
+  .mat-spine-bd { background: linear-gradient(180deg, var(--warn), #f97316); }
+  .mat-spine-ml { background: linear-gradient(180deg, #c084fc, #818cf8); }
+
+  .mat-body { padding: 20px 22px; flex: 1; }
+
+  .mat-id {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: 1px; margin-bottom: 6px;
+  }
+  .mat-title { font-size: 13px; font-weight: 700; color: #e2e8f0; line-height: 1.5; margin-bottom: 8px; }
+  .mat-author { font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+
+  .mat-highlights { display: flex; flex-direction: column; gap: 4px; }
+  .mat-highlight {
+    font-size: 12px; color: var(--muted2); line-height: 1.6;
+    display: flex; align-items: flex-start; gap: 6px;
+  }
+  .mat-highlight::before {
+    content: '▸'; color: var(--accent); font-size: 10px;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .mat-spine-ml ~ .mat-body .mat-highlight::before { color: #c084fc; }
+  .mat-spine-bd ~ .mat-body .mat-highlight::before { color: var(--warn); }
+
+  .mat-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .mat-tag {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    padding: 2px 8px;
+    background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15);
+    color: #7dd3fc; letter-spacing: 0.5px;
+  }
+  .mat-action {
+    display: flex; align-items: center; padding: 0 20px;
+    flex-shrink: 0;
+  }
+  .mat-btn {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--accent); border: 1px solid rgba(56,189,248,0.3);
+    padding: 8px 14px; text-decoration: none; letter-spacing: 1px;
+    white-space: nowrap; display: block;
+    background: rgba(56,189,248,0.05);
+  }
+  .mat-mosme-note {
+    margin-top: 20px;
+    background: rgba(56,189,248,0.04);
+    border: 1px solid rgba(56,189,248,0.15);
+    padding: 16px 20px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .mosme-icon { font-size: 28px; flex-shrink: 0; }
+  .mosme-text h5 { font-size: 13px; font-weight: 700; color: #7dd3fc; margin-bottom: 4px; }
+  .mosme-text p { font-size: 12px; color: var(--muted2); line-height: 1.6; }
+
+  /* ─────────────────────────────────────────
+     TARGET AUDIENCE
+  ───────────────────────────────────────── */
+  .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .audience-card {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px;
+  }
+  .audience-num {
+    font-family: 'Space Mono', monospace; font-size: 28px; font-weight: 700;
+    color: rgba(56,189,248,0.2); line-height: 1; flex-shrink: 0; padding-top: 2px;
+  }
+  .audience-title { font-size: 13px; font-weight: 700; color: #f1f5f9; margin-bottom: 5px; }
+  .audience-desc { font-size: 12px; color: var(--muted2); line-height: 1.65; }
+
+  /* ─────────────────────────────────────────
+     NOTE BOX
+  ───────────────────────────────────────── */
+  .note-box {
+    background: rgba(251,191,36,0.05); border: 1px solid rgba(251,191,36,0.20);
+    padding: 20px 24px; margin-top: 20px;
+  }
+  .note-box p { font-size: 13px; color: #fcd34d; line-height: 1.75; margin-bottom: 8px; }
+  .note-box p:last-child { margin-bottom: 0; }
+
+  /* ─────────────────────────────────────────
+     ISSUER
+  ───────────────────────────────────────── */
+  .issuer-box {
+    background: linear-gradient(135deg, var(--card) 0%, rgba(56,189,248,0.06) 100%);
+    border: 1px solid rgba(56,189,248,0.22);
+    padding: 28px 32px; display: flex; align-items: flex-start; gap: 24px;
+  }
+  .issuer-icon-wrap {
+    width: 56px; height: 56px;
+    background: rgba(56,189,248,0.10); border: 1px solid rgba(56,189,248,0.28);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; flex-shrink: 0;
+  }
+  .issuer-text h4 { font-size: 15px; font-weight: 700; color: #7dd3fc; margin-bottom: 6px; }
+  .issuer-text p { font-size: 13px; color: var(--muted2); line-height: 1.75; }
+
+  /* ─────────────────────────────────────────
+     CTA
+  ───────────────────────────────────────── */
+  .cta-section {
+    padding: 60px 40px; text-align: center;
+    background: linear-gradient(180deg, var(--bg) 0%, #040810 100%);
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px; height: 320px;
+    background: radial-gradient(ellipse, rgba(56,189,248,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-label {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .cta-headline { font-size: 32px; font-weight: 900; color: #f1f5f9; line-height: 1.3; margin-bottom: 16px; }
+  .cta-sub { font-size: 15px; color: var(--muted2); margin-bottom: 36px; line-height: 1.75; }
+  .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block; background: var(--accent); color: #02080e;
+    font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; padding: 14px 32px;
+    text-decoration: none; text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56,189,248,0.35); }
+  .btn-secondary {
+    display: inline-block; background: transparent; color: var(--accent);
+    border: 1px solid var(--accent);
+    font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; padding: 14px 32px;
+    text-decoration: none; text-transform: uppercase;
+  }
+  .btn-tertiary {
+    display: inline-block; background: transparent; color: var(--muted2);
+    border: 1px solid var(--border);
+    font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; padding: 14px 32px;
+    text-decoration: none; text-transform: uppercase;
+  }
+
+  /* ─────────────────────────────────────────
+     FOOTER
+  ───────────────────────────────────────── */
+  .footer {
+    background: var(--surface); padding: 32px 40px;
+    border-top: 1px solid var(--border); text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700;
+    color: var(--accent); letter-spacing: 2px; margin-bottom: 16px;
+  }
+  .footer-contact { font-size: 13px; color: var(--muted); line-height: 2.1; }
+  .footer-contact a { color: var(--accent); text-decoration: none; }
+  .footer-copy { font-size: 11px; color: #334155; margin-top: 20px; }
+
+  /* ─────────────────────────────────────────
+     RESPONSIVE
+  ───────────────────────────────────────── */
+  @media (max-width: 600px) {
+    .hero { padding: 40px 24px 36px; }
+    .hero-title { font-size: 36px; }
+    .level-ladder { padding: 24px; }
+    .ladder-row { grid-template-columns: 1fr; gap: 10px; }
+    .ladder-arrow { display: none; }
+    .section, .materials-section { padding: 36px 24px; }
+    .adv-grid { grid-template-columns: 1fr; }
+    .stats-bar { grid-template-columns: repeat(2,1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    .chain-grid { grid-template-columns: repeat(2,1fr); }
+    .cta-section { padding: 40px 24px; }
+    .footer { padding: 28px 24px; }
+    .issuer-box { flex-direction: column; }
+    .subject-meta { grid-template-columns: repeat(2,1fr); }
+    .subject-header { flex-direction: column; align-items: flex-start; }
+    .audience-grid { grid-template-columns: 1fr; }
+    .tech-float { display: none; }
+    .mat-card { flex-direction: column; }
+    .mat-action { padding: 0 20px 20px; }
+    .mat-btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <div class="hero">
+    <div class="hero-scan"></div>
+    <div class="tech-float">
+      <span>LLM / VLM</span>
+      <span>OpenVINO</span>
+      <span>RAG / Agent</span>
+      <span>Big Data</span>
+    </div>
+
+    <div class="badge-row">
+      <span class="badge">國際認證</span>
+      <span class="badge badge-org">IPOE 艾葆科教基金會</span>
+      <span class="badge badge-expert">⚡ 進階工程師等級</span>
+      
+    </div>
+
+    <p class="hero-eyebrow">Artificial Intelligence Expertise Certification</p>
+    <h1 class="hero-title">AIE<br><em>人工智慧專業能力</em><br>國際認證</h1>
+    <p class="hero-subtitle">
+      AIAP · BDAE · MLAE<br>
+      Specialist → Expert 完整進階路徑
+    </p>
+    <p class="hero-desc">
+      親愛的老師，AI 的浪潮已不只是應用層面——<br>
+      <strong style="color:#7dd3fc">真正的競爭力，在於能訓練、能部署、能優化 AI 系統。</strong><br>
+      AIE 認證從 AI 基礎概論、生成式 AI，一路延伸至大語言模型微調、<br>
+      大數據工程與機器學習部署，協助學生成為企業搶著要的 AI 實戰人才。
+    </p>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       LEVEL LADDER
+  ══════════════════════════════════════ -->
+  <div class="level-ladder">
+    <div class="ladder-label">▸ AIE 認證進階路徑</div>
+    <div class="ladder-row">
+      <div class="ladder-step active">
+        <div class="step-code" style="color:var(--accent)">AIAP</div>
+        <div class="step-name">人工智慧<br>應用規劃師</div>
+        <span class="step-level lvl-s">SPECIALIST</span>
+      </div>
+      <div class="ladder-arrow">→</div>
+      <div class="ladder-step active">
+        <div class="step-code" style="color:var(--warn)">BDAE</div>
+        <div class="step-name">大數據<br>應用工程師</div>
+        <span class="step-level lvl-e">EXPERT</span>
+      </div>
+      <div class="ladder-arrow">→</div>
+      <div class="ladder-step active">
+        <div class="step-code" style="color:#c084fc">MLAE</div>
+        <div class="step-name">機器學習<br>應用工程師</div>
+        <span class="step-level lvl-e">EXPERT</span>
+      </div>
+    </div>
+  </div>
+
+ <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">3</span>
+      <span class="stat-label">認證科目</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">🇳🇱</span>
+      <span class="stat-label">荷蘭發證機構</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">PSC</span>
+      <span class="stat-label">專業技能認證系統</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════════════
+       ADVANTAGES
+  ══════════════════════════════════════ -->
+  <div class="section">
+    <p class="section-tag">為何推薦 AIE</p>
+    <h2 class="section-title">從「會用 AI」到「能打造 AI 應用」，這一步，決定您的競爭高度</h2>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <span class="adv-icon">🔗</span>
+        <div class="adv-title">完整覆蓋 AI 產業技能</div>
+        <div class="adv-desc">從大數據分析、機器學習到生成式 AI 應用，深入探討 LLM 微調、多模態技術與 AI 風險管理規劃</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🏭</span>
+        <div class="adv-title">模組化，接軌 iPAS 國家考試</div>
+        <div class="adv-desc">AIE 教材同步對應經濟部 iPAS AI 應用規劃師初、中級，一套備考，雙重認可，學習效益最大化。</div>
+      </div>
+      <div class="adv-card">
+        <span class="adv-icon">🚀</span>
+        <div class="adv-title">Engineer 等級，企業首選</div>
+        <div class="adv-desc">BDAE、MLAE 為 Expert Level，對應工程師職位需求，持證者在 AI 職缺中具備明確的技術信賴背書。</div>
+      </div>
+    </div>
+
+    <!-- 全技術鏈 -->
+    <div class="tech-chain">
+      <div class="chain-title">▸ AIE 核心技術涵蓋範圍</div>
+      <div class="chain-grid">
+        <div class="chain-item">
+          <span class="chain-icon">🧠</span>
+          <div class="chain-name">AI 核心技術<br>與生成式 AI</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">📊</span>
+          <div class="chain-name">大數據<br>處理與分析</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">⚙️</span>
+          <div class="chain-name">機器學習<br>模型訓練部署</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">🔬</span>
+          <div class="chain-name">大型語言模型<br>與提示工程</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">🗄️</span>
+          <div class="chain-name">主權資料<br>管理</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">🕸️</span>
+          <div class="chain-name">多模態 AI <br>整合應用</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">⚡</span>
+          <div class="chain-name">RAG 檢索增強<br>生成技術</div>
+        </div>
+        <div class="chain-item">
+          <span class="chain-icon">☁️</span>
+          <div class="chain-name">AI 系統<br>部署與評估</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SUBJECTS
+  ══════════════════════════════════════ -->
+  <div class="section">
+    <p class="section-tag">考試科目及費用</p>
+    <h2 class="section-title">3 大科目，建構完整 AI 工程師能力圖譜</h2>
+    <div class="subject-stack">
+
+      <!-- AIAP Specialist -->
+      <div class="subject-card">
+        <div class="subject-header">
+          <div class="subject-badge-wrap">
+            <div class="cert-icon-box">🎯</div>
+            <div>
+              <div class="subject-code code-aiap">AIAP — 人工智慧應用規劃師</div>
+              <div class="subject-name">對應 iPAS AI 應用規劃師 初級 鑑定科目：<br>人工智慧基礎概論、生成式AI應用與規劃</div>
+              <div class="subject-name-en">Artificial Intelligence Application Planner</div>
+              <span class="level-badge lvl-s">SPECIALIST</span>
+            </div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$1,200</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">50</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">40 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list">
+            <li>人工智慧概念</li>
+            <li>資料處理與分析概念</li>
+            <li>機器學習概念</li>
+            <li>鑑別式 AI 與生成式 AI 原理</li>
+            <li>Low code / No code 概念</li>
+            <li>生成式 AI 應用領域</li>
+            <li>生成式 AI 導入評估規劃</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BDAE Expert -->
+      <div class="subject-card expert-card">
+        <div class="subject-header">
+          <div class="subject-badge-wrap">
+            <div class="cert-icon-box expert">📊</div>
+            <div>
+              <div class="subject-code code-bdae">BDAE — 大數據應用工程師</div>
+              <div class="subject-name">對應 iPAS AI 應用規劃師 中級 鑑定科目：<br>人工智慧技術應用與規劃、大數據處理分析與應用</div>
+              <div class="subject-name-en">Big Data Application Engineer</div>
+              <span class="level-badge lvl-e">EXPERT</span>
+            </div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$2,000</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">80</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list expert">
+            <li>AI相關技術應用</li>
+            <li>AI導入評估規劃</li>
+            <li>AI技術應用與系統部署</li>
+            <li>機率統計基礎</li>
+            <li>大數據處理技術</li>
+            <li>大數據分析方法與工具</li>
+            <li>大數據與機器學習</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MLAE Expert -->
+      <div class="subject-card" style="border-color: rgba(192,132,252,0.22);">
+        <div class="subject-header" style="border-bottom-color: rgba(192,132,252,0.14);">
+          <div class="subject-badge-wrap">
+            <div class="cert-icon-box" style="background:rgba(192,132,252,0.06); border-color:rgba(192,132,252,0.20);">⚙️</div>
+            <div>
+              <div class="subject-code code-mlae">MLAE — 機器學習應用工程師</div>
+              <div class="subject-name">對應 iPAS AI 應用規劃師 中級 鑑定科目：<br>人工智慧技術應用與規劃、機器學習技術與應用</div>
+              <div class="subject-name-en">Machine Learning Application Engineer</div>
+              <span class="level-badge" style="background:rgba(192,132,252,0.10);border:1px solid rgba(192,132,252,0.28);color:#d8b4fe;">EXPERT</span>
+            </div>
+          </div>
+          <div class="price-tag">
+            <div class="price-label">考試費用</div>
+            <div class="price-val">NT$2,000</div>
+          </div>
+        </div>
+        <div class="subject-meta">
+          <div class="meta-item"><span class="meta-val">80</span><span class="meta-key">題數</span></div>
+          <div class="meta-item"><span class="meta-val">60 min</span><span class="meta-key">時間</span></div>
+          <div class="meta-item"><span class="meta-val">700</span><span class="meta-key">及格標準</span></div>
+          <div class="meta-item"><span class="meta-val">單選題</span><span class="meta-key">題型</span></div>
+        </div>
+        <div class="subject-scope">
+          <div class="scope-title">考試範疇</div>
+          <ul class="scope-list mlae">
+            <li>AI相關技術應用</li>
+            <li>AI導入評估規劃</li>
+            <li>AI技術應用與系統部署</li>
+            <li>機器學習基礎數學</li>
+            <li>機器學習與深度學習</li>
+            <li>機器學習建模與參數調校</li>
+            <li>機器學習治理</li>
+          </ul>
+        </div>
+      </div>
+
+    
+
+  <!-- ══════════════════════════════════════
+       LEARNING MATERIALS
+  ══════════════════════════════════════ -->
+  <div class="materials-section">
+    <p class="section-tag">官方學習教材</p>
+    <h2 class="section-title">3 本教材，完整對應 AIE 認證 ＋ iPAS 雙考</h2>
+    <p style="font-size:14px;color:var(--muted2);line-height:1.8;margin-bottom:28px;">
+      AIE 官方教材，理論與產業實務並重，
+      每冊均附贈 <strong style="color:#7dd3fc">MOSME 行動學習一點通</strong> 授權，讓學生自學備考更有效率。
+    </p>
+
+    <div class="mat-grid">
+
+      <!-- Book 1: AIAP -->
+      <div class="mat-card">
+        <div class="mat-spine mat-spine-s"></div>
+        <div class="mat-body">
+          <div class="mat-id">PG62001 ／ 第二版・最新版</div>
+          <div class="mat-title">iPAS AI應用規劃師初級應鑑指南<br>（人工智慧基礎概論、生成式AI應用與規劃）<br>含 AIE 認證：AIAP 人工智慧應用規劃師 Specialist</div>
+          <div class="mat-author">作者：高煥堂　｜　附贈 MOSME 行動學習一點通授權</div>
+          <div class="mat-highlights">
+            <div class="mat-highlight">建立 NN 核心概念，領會 ML 模型技術與 AI 應用實作基礎</div>
+            <div class="mat-highlight">深探 AI 動能之源「資料」，掌握資料整理、模型訓練與驗證</div>
+            <div class="mat-highlight">認識 AI 倫理與資料偏見議題，培養負責任的 AI 應用視野</div>
+          </div>
+          <div class="mat-tags">
+            <span class="mat-tag">AIAP Specialist</span>
+            <span class="mat-tag">生成式 AI</span>
+            <span class="mat-tag">iPAS 初級</span>
+          </div>
+        </div>
+        <div class="mat-action">
+          <a href="https://tkdbook.jyic.net/PG62001" class="mat-btn">查看教材 →</a>
+        </div>
+      </div>
+
+      <!-- Book 2: BDAE -->
+      <div class="mat-card">
+        <div class="mat-spine mat-spine-bd"></div>
+        <div class="mat-body">
+          <div class="mat-id">PG622 ／ 最新版</div>
+          <div class="mat-title">iPAS AI應用規劃師中級應鑑指南<br>（人工智慧技術應用與規劃、大數據處理分析與應用）<br>含 AIE 認證：BDAE 大數據應用工程師 Expert</div>
+          <div class="mat-author">作者：高煥堂　｜　附贈 MOSME 行動學習一點通授權</div>
+          <div class="mat-highlights">
+            <div class="mat-highlight" style="--bullet-color:var(--warn)">全面涵蓋 NLP、生成式 AI、電腦視覺與多模態應用技術體系</div>
+            <div class="mat-highlight">深入探討 LLM、RAG 前沿技術，結合 AI 導入評估與風險管理</div>
+            <div class="mat-highlight">掌握大數據處理流程、特徵工程與資料視覺化實務</div>
+          </div>
+          <div class="mat-tags">
+            <span class="mat-tag" style="color:#fdba74;background:rgba(251,146,60,0.06);border-color:rgba(251,146,60,0.15);">BDAE Expert</span>
+            <span class="mat-tag" style="color:#fdba74;background:rgba(251,146,60,0.06);border-color:rgba(251,146,60,0.15);">大數據</span>
+            <span class="mat-tag" style="color:#fdba74;background:rgba(251,146,60,0.06);border-color:rgba(251,146,60,0.15);">iPAS 中級</span>
+          </div>
+        </div>
+        <div class="mat-action">
+          <a href="https://tkdbook.jyic.net/PG622" class="mat-btn" style="color:var(--warn);border-color:rgba(251,146,60,0.3);background:rgba(251,146,60,0.05);">查看教材 →</a>
+        </div>
+      </div>
+
+      <!-- Book 3: MLAE -->
+      <div class="mat-card">
+        <div class="mat-spine mat-spine-ml"></div>
+        <div class="mat-body">
+          <div class="mat-id">PG623 ／ 最新版</div>
+          <div class="mat-title">iPAS AI應用規劃師中級應鑑指南<br>（人工智慧技術應用與規劃、機器學習技術與應用）<br>含 AIE 認證：MLAE 機器學習應用工程師 Expert</div>
+          <div class="mat-author">作者：高煥堂　｜　附贈 MOSME 行動學習一點通授權</div>
+          <div class="mat-highlights">
+            <div class="mat-highlight" style="color:var(--muted2)">完整知識架構：AI 基礎、機器學習、深度學習、生成式 AI 全覆蓋</div>
+            <div class="mat-highlight">理論與實務並重，結合 AI 模型架構推理與 OpenVINO 優化部署</div>
+            <div class="mat-highlight">多模態 AI 與 AI Agent 設計，緊跟產業最前沿技術趨勢</div>
+          </div>
+          <div class="mat-tags">
+            <span class="mat-tag" style="color:#d8b4fe;background:rgba(192,132,252,0.06);border-color:rgba(192,132,252,0.15);">MLAE Expert</span>
+            <span class="mat-tag" style="color:#d8b4fe;background:rgba(192,132,252,0.06);border-color:rgba(192,132,252,0.15);">機器學習</span>
+            <span class="mat-tag" style="color:#d8b4fe;background:rgba(192,132,252,0.06);border-color:rgba(192,132,252,0.15);">iPAS 中級</span>
+          </div>
+        </div>
+        <div class="mat-action">
+          <a href="https://tkdbook.jyic.net/PG623" class="mat-btn" style="color:#c084fc;border-color:rgba(192,132,252,0.3);background:rgba(192,132,252,0.05);">查看教材 →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MOSME -->
+    <div class="mat-mosme-note">
+      <div class="mosme-icon">📱</div>
+      <div class="mosme-text">
+        <h5>MOSME 行動學習一點通 - 隨買隨學</h5>
+        <p>每冊均附贈 MOSME 學習系統授權，提供線上題庫練習、章節重點複習與自學進度追蹤，學生備考更有方向，老師掌握進度更輕鬆。可至 <strong style="color:#7dd3fc">mosme.net</strong> 查看完整教材目錄。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       TARGET AUDIENCE
+  ══════════════════════════════════════ -->
+  <div class="section">
+    <p class="section-tag">適合對象</p>
+    <h2 class="section-title">哪些學生最適合考 AIE？</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-num">01</div>
+        <div>
+          <div class="audience-title">資工／資管系學生</div>
+          <div class="audience-desc">有 Python 基礎，想以 AI 工程師認證強化就業競爭力，對應 BDAE / MLAE Expert 等級。</div>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">02</div>
+        <div>
+          <div class="audience-title">已持 AIA 的學生</div>
+          <div class="audience-desc">完成 AIA 基礎認證後，希望進一步取得更深層的工程師等級能力認可，AIE 是最佳下一步。</div>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">03</div>
+        <div>
+          <div class="audience-title">技術轉型從業者</div>
+          <div class="audience-desc">非本科系但有志轉入 AI 領域的工程師與教育工作者，透過系統化認證建立完整技術框架。</div>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">04</div>
+        <div>
+          <div class="audience-title">準備 iPAS 考生</div>
+          <div class="audience-desc">AIE 教材完整對應 iPAS 初／中級考試，同步備考兩張認證，最大化備考投資報酬率。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       ISSUER
+  ══════════════════════════════════════ -->
+  <div class="section">
+    <p class="section-tag">發證單位</p>
+    <h2 class="section-title">讓努力不只被看見，更被世界認可</h2>
+    <div class="issuer-box">
+      <div class="issuer-icon-wrap">🇳🇱</div>
+      <div class="issuer-text">
+        <h4>Stichting IPOE Education Foundation（艾葆科教基金會）</h4>
+        <p>
+          總部設於荷蘭，致力推動全球資訊科技教育認證。AIE 人工智慧專業能力國際認證透過
+          <strong style="color:#7dd3fc">PSC 專業技能認證系統</strong>進行考試與憑證管理，
+          支援線上憑證驗證，確保證書真實性，協助持證者在求職與升遷中建立可信賴的技術背書。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       CTA
+  ══════════════════════════════════════ -->
+  <div class="cta-section">
+    <p class="cta-label">立即行動</p>
+    <h2 class="cta-headline">帶領學生<br>從使用 AI 到駕馭 AI</h2>
+    <p class="cta-sub">
+      個人報名、班級團報或申請授權考試中心，<br>
+      讓學生帶著真正的工程師能力走向未來職場。
+    </p>
+    <div class="btn-group">
+      <a href="https://reurl.cc/lYNO5d" class="btn-primary">個人認證考試</a>
+      <a href="https://jyic.net/jyic.servicegroup" class="btn-secondary">團體認證洽詢</a>
+      <a href="https://ipoetech.jyic.net/AIE&materials" class="btn-tertiary">查看學習教材</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">艾葆國際認證中心</div>
+    <div class="footer-contact">
+      官方網站：<a href="https://ipoetech.jyic.net/AIE">ipoetech.jyic.net/AIE</a><br>
+      
+      MOSME 學習系統：<a href="https://www.mosme.net/mosme/book?order=6&c=177&t=177&sub=177_827&category=IPOE">mosme.net</a><br>
+      
+    </div>
+    <div class="footer-copy">© 2013 勁園科教集團 All Rights Reserved．本 EDM 資料來源：艾葆國際認證中心官方網站</div>
+  </div>
+
+</div>
+</body>
+</html>
