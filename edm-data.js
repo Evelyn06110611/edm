@@ -25,17 +25,17 @@ const EDM_LIST = [
     date: "2026-05-05",
     tag: "AIA",
     desc: "發證單位：Stichting IPOE Education Foundation[艾葆科教基金會]",
-    file: "edms/AIA.html",
+    file: "AIA.html",
     cover: "",
     color: "#e05a2b"
   },
   {
     id: 2,
     title: "AIE人工智慧專業能力國際認證",
-    date: "2026-05-05",
+    date: "2026-05-06",
     tag: "AIE",
     desc: "發證單位：Stichting IPOE Education Foundation[艾葆科教基金會]",
-    file: "edms/AIE.html",
+    file: "AIE.html",
     cover: "",
     color: "#2e7d5e"
   },
@@ -45,19 +45,29 @@ const EDM_LIST = [
     date: "2026-05-05",
     tag: "SEC",
     desc: "發證單位：Stichting IPOE Education Foundation[艾葆科教基金會]",
-    file: "edms/SEC.html",
+    file: "SEC.html",
     cover: "",
     color: "#4a5568"
   },
   {
     id: 4,
     title: "WIA職場智能應用國際認證",
-    date: "2026-05-05",
+    date: "2026-05-06",
     tag: "WIA",
     desc: "發證單位：Stichting IPOE Education Foundation[艾葆科教基金會]",
-    file: "edms/SEC.html",
+    file: "WIA.html",
     cover: "",
     color: "#7b2d8b"
   }
+ {
+    id: 5,
+    title: "ESG永續經營國際認證",
+    date: "2026-05-07",
+    tag: "WIA",
+    desc: "發證單位：Stichting IPOE Education Foundation[艾葆科教基金會]",
+    file: "ESG.html",
+    cover: "",
+    color: "#7b2d8b"
+
   // ↑ 在這裡繼續新增更多 EDM 物件，用逗號隔開
 ];
